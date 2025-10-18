@@ -5,8 +5,10 @@ import { Header } from './components/ui/Header';
 import { ReactSection } from './components/ui/ReactSection';
 import { DnsSection } from './components/ui/DnsSection';
 import { Footer } from './components/ui/Footer';
+import loading from './loading';
 
 const Home: NextPage = () => {
+
   const initialData = {
     header: {
       title: 'Web Development Insights',
