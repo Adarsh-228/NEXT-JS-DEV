@@ -6,6 +6,7 @@ console.log(`Hello World`);
     <h1> Welcome to about section hailow  </h1>
     <h2 className="text-3xl"> hailow  </h2>
     
+    
       </>
   );
 }
