@@ -35,10 +35,51 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-## Animation Resources
+## API Routes in Next.js
 
-- [three.js](https://threejs.org)
-- [react-spring](https://www.react-spring.dev)
-- [velocity.js](http://velocityjs.org)
-- [anime.js](https://animejs.com)
-- [gsap](https://greensock.com)
+In Next.js, you can create API routes by creating a `route.ts` file inside any folder in the `app` directory.
+
+### Creating a simple API route
+
+For example, to create an API route that returns a "Hello world" message, you can create a file at `app/api/hello/route.ts` with the following content:
+
+```typescript
+import { NextResponse } from 'next/server';
+
+export async function GET() {
+  return NextResponse.json({ message: 'Hello world from backend!' });
+}
+```
+
+### Storing Dummy Data
+
+You can create a file, for example `app/api/db.ts`, to store some dummy data.
+
+### GET and POST routes
+
+You can create GET and POST routes for a resource, for example "books", by creating a `route.ts` file at `app/api/books/route.ts`.
+
+### Dynamic Routes for PUT and DELETE
+
+For PUT and DELETE requests, you need to create a dynamic route handler. For example, you can create a file at `app/api/books/[id]/route.ts`. Inside this file, you can export `async function PUT` for the update request and `async function DELETE` for the delete request.
+
+### Calling the API
+
+You can call the API from your components like this:
+
+```typescript
+async function Page() {
+  const response = await fetch("http://localhost:3000/api/books");
+  const books = await response.json();
+
+  return (
+    <main>
+      <pre>{JSON.stringify(books, null, 2)}</pre>
+    </main>
+  );
+}
+```
+
+## Search Engine Optimization (SEO)
+
+For search engine optimization, you can set up the metadata config. Please refer to the [Next.js documentation](https://nextjs.org/docs/app/building-your-application/optimizing/metadata) for more details.
