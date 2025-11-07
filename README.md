@@ -55,3 +55,4 @@ async function Page() {
 ## Search Engine Optimization (SEO)
 
 For search engine optimization, you can set up the metadata config. Please refer to the Next.js documentation for more details the search engine optimisation metadata that is to be added will be added soon just in case you need some thing visit next js docs
+i will be updating everything after 10th of nov
