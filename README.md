@@ -1,4 +1,4 @@
-##Here i will be keeping the track of all my next-js learning 
+#Here i will be keeping the track of all my next-js learning 
 
 ## these are also my developement notes
 
