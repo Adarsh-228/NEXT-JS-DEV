@@ -17,7 +17,7 @@ For example, to create an API route that returns a "Hello world" message, you ca
 
 ```typescript
 import { NextResponse } from 'next/server';
-
+Yeahh 
 export async function GET() {
   return NextResponse.json({ message: 'Hello world from backend!' });
 }
